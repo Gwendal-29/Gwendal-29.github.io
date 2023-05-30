@@ -30,6 +30,7 @@ body{
     font-family: "Roboto-Condensed", serif;
     background-color: #000101;
     color:#fefeff;
+    position:relative;
     
 
 }
@@ -336,7 +337,7 @@ header h2{
     width:400px;
     height:680px;
     margin-bottom: 200px;
-    margin-left: 50px;
+    
 }
 footer{
     background-color: #000101;
@@ -375,8 +376,11 @@ dd{
 
 .position{
     display:flex;
-    align-items: center;
     flex: wrap;
+    justify-content: center;
+    margin-top: 5%;
+
+    
     
     
 }
@@ -384,17 +388,14 @@ dd{
     height: 100vh;
 }
 
-.logoTitle{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;   
-}
+
 
 .texte{
     font-size:calc(1rem + 1vw);
     flex-grow: 10;
     margin-right:200px;
     margin-left:2vw;
+    max-width:50%;
    
 
 }
@@ -421,7 +422,7 @@ h3{
 .text-container {
     font-weight: bold;
     color: white;
-    font-size: calc(8em + 3vw);
+    font-size: calc(7em + 3vw);
     margin-top:250px;
     letter-spacing:20px;
   }
@@ -445,8 +446,40 @@ h3{
     
 }
 
-fleche:hover{
+.fleche:hover{
     cursor: pointer;
 }
 
+
+@media  screen and (max-width:1080px) {
+    .position{
+        
+        margin-top: 5%;
+        flex-direction: column;
+    
+        
+        
+    }
+
+    .texte{
+        
+        font-size:calc(1.2rem + 1vw);
+        margin: 0 auto;
+        margin-bottom: 15%;
+    }
+  
+    .logoTitle{
+        margin: 0 auto; 
+        display:flex;
+        flex-direction: column;
+        width:50vw;
+        justify-content: center;
+  
+    }
+    
+    
+    
+}
+
+/*classe javaScript*/
 

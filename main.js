@@ -4,6 +4,9 @@ const cursor = document.getElementById("pointor");
 const footer = document.querySelector("footer");
 const contact = document.querySelector(".contact");
 const imgCv = document.getElementById("img-cv");
+const disapear = document.querySelector("disapear");
+const projet = document.querySelector("project");
+
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
@@ -35,5 +38,9 @@ window.addEventListener("resize", () => {
   }
 });
 
-// 
+projet.addEventListener("click", ()=>{
+
+  document.body.style.color ="red";
+
+});
 
