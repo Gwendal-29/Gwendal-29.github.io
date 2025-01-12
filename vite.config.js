@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    define: {
-        // By default, Vite doesn't include shims for NodeJS/
-        // necessary for segment analytics lib to work
-        global: {},
-        __DEFINES__: JSON.stringify({}),
-      },
-      build: {
-        minify: 'esbuild', // Utilisez esbuild pour minimiser les erreurs
-      },
+    root: 'src/', // Sources files (typically where index.html is)
+    publicDir: '../static/', // Path from "root" to static assets (files that are served as they are)
+   
+    build:
+    {
+        outDir: '../dist', // Output in the dist/ folder
+        emptyOutDir: true, // Empty the folder first
+        sourcemap: true // Add sourcemap
+    },
 });
