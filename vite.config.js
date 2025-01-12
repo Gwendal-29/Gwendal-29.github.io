@@ -22,6 +22,7 @@ export default defineConfig({
     define: {
         // Définir une valeur par défaut pour éviter l'erreur
         __DEFINES__: JSON.stringify({}),
+        global: {},
       },
     build:
     {
