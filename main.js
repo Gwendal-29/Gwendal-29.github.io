@@ -1,90 +1,191 @@
 //constante
+import LocomotiveScroll from "locomotive-scroll";
+import "swiper/swiper-bundle.css";
+import Swiper, { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper";
+import Swal from "sweetalert2";
 
-const cursor = document.getElementById("pointor");
-const footer = document.querySelector("footer");
-const contact = document.querySelector(".contact");
-const imgCv = document.getElementById("img-cv");
-const disapear = document.querySelector("disapear");
-const projet = document.querySelector("project");
 
+
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Pagination, Autoplay, EffectCoverflow],
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 10,
+    depth: 200,
+    modifier: 1.5,
+    slideShadows: true,
+  },
+  spaceBetween: 30,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+})
+
+
+const contact = document.querySelector(".contact")
+const imgCv = document.getElementById("img-cv")
 const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   tablet: { smooth: true },
   smartphone: { smooth: true },
-});
 
-// avoir un beau curseur
-document.addEventListener("mousemove", (e) => {
-  cursor.style.top = e.pageY + "px";
-  cursor.style.left = e.pageX + "px";
-});
+})
 
 // Changer la couleur de fond
 scroll.on("scroll", () => {
   if (document.querySelector("#color.is-inview")) {
-    document.body.style.backgroundColor = "#000101";
-    document.body.style.color = "#fefeff";
+    document.body.style.backgroundColor = "#000101"
+    document.body.style.color = "#fefeff"
   } else {
-    document.body.style.backgroundColor = "#fefeff";
-    document.body.style.color = "#000101";
+    document.body.style.backgroundColor = "#fefeff"
+    document.body.style.color = "#000101"
   }
-});
+})
 
 // Retirer la margine lors du rétrécissement de l'écrans
 window.addEventListener("resize", () => {
   if (getComputedStyle(contact).flexWrap === "wrap") {
-    imgCv.style.marginBottom = 20 + "px";
+    imgCv.style.marginBottom = 20 + "px"
   }
-});
+})
 
-// Fenetre modale
 
-const modalTrigger1 = document.querySelector(".modal-trigger1");
-const modal1 = document.getElementById("modal-1");
 
-const modalTrigger2 = document.querySelector(".modal-trigger2");
-const modal2 = document.getElementById("modal-2");
 
-const modalTrigger3 = document.querySelector(".modal-trigger3");
-const modal3 = document.getElementById("modal-3");
+document.querySelectorAll('.swiper-slide').forEach((slide) => {
+  slide.addEventListener('click', () => {
+      fetch('projects.json')
+          .then(response => response.json())
+          .then(data => {
+              const title = slide.getAttribute('data-title');
+              const project = data.find(project => project.title === title);
+              
 
-const modalTrigger4 = document.querySelector(".modal-trigger4");
-const modal4 = document.getElementById("modal-4");
+              if (!project) {
+                  console.error('Projet non trouvé');
+                  return;
+              }
 
-const modalTrigger5 = document.querySelector(".modal-trigger5");
-const modal5 = document.getElementById("modal-5");
+            
+              
+              
+              // Création dynamique du carrousel Swiper avec les images du projet
+              const carouselHtml = project.images && project.images.length > 0 ? `
+                  <div class="swiper project-carousel">
+                      <div class="swiper-wrapper">
+                          ${project.images.map(image => `
+                              <div class="swiper-slide">
+                                  <img src="${image.url}" alt="${image.alt}" style="width: 80%; height: auto; border-radius: 8px;">
+                                 
+                              </div>
+                          `).join('')}
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                  </div>
+              ` : ''
 
-const modalTrigger6 = document.querySelector(".modal-trigger6");
-const modal6 = document.getElementById("modal-6");
+              // Création de la liste des compétences
+              const competencesHtml = project.competences.map(c => `
+                  <li style="color: #555; font-size: 16px; line-height: 1.6;">
+                      <strong>${c.name}:</strong> ${c.details}
+                  </li>
+              `).join('')
 
-const buttonModal = document.querySelectorAll(".button-modal");
-const modalContainer = document.querySelectorAll(".modal-container");
+              // Création de la liste des technologies utilisées
+              const toolsHtml = project.tools && project.tools.length > 0 ? `
+                  <h3 style="text-align: left;font-size: calc(0.8em + 0.8vw);margin-top: 20px;">Technologies utilisées :</h3>
+                  <ul style="color: #555; font-size: 16px; line-height: 1.6;">
+                      ${project.tools.map(tool => `<li>${tool.name}</li>`).join('')}
+                  </ul>
+              ` : ''
 
-modalTrigger1.addEventListener("click", () => {
-  modal1.classList.add("modal-container-toggle");
-});
-modalTrigger2.addEventListener("click", () =>
-  modal2.classList.add("modal-container-toggle")
-);
+              Swal.fire({
+                  title: `<span style=" font-size: calc(0.8em + 0.8vw); font-weight: bold;">${project.title}</span>`,
+                  html: `
+                      <div style="text-align: left; max-height: 500px; overflow-y: auto; padding-right: 10px;">
+                          <h3 style="text-align: left;font-size: calc(0.7em + 0.8vw);">Compétences mobilisées :</h3>
+                          <ul>
+                              ${competencesHtml}
+                          </ul>
+                          ${carouselHtml}
+                          <h3 style="text-align: left;font-size: calc(0.8em + 0.8vw); margin-top: 20px;">Description :</h3>
+                          <p style="color: #555; font-size: 18px; line-height: 1.6;">${project.description}</p>
+                          ${toolsHtml}
+                      </div>
+                  `,
+                  width: '900px',
+                  showCloseButton: true,
+                  showConfirmButton: false
+                  
+              })
 
-modalTrigger3.addEventListener("click", () =>
-  modal3.classList.add("modal-container-toggle")
-);
-modalTrigger4.addEventListener("click", () =>
-  modal4.classList.add("modal-container-toggle")
-);
-modalTrigger5.addEventListener("click", () =>
-  modal5.classList.add("modal-container-toggle")
-);
-modalTrigger6.addEventListener("click", () =>
-  modal6.classList.add("modal-container-toggle")
-);
-
-buttonModal.forEach((element) =>
-  element.addEventListener("click", () => {
-    modalContainer.forEach((element) =>
-      element.classList.remove("modal-container-toggle")
-    );
+              // Initialiser Swiper avec la même configuration que sur la page principale
+              setTimeout(() => {
+                  if (project.images && project.images.length > 0) {
+                      new Swiper('.project-carousel', {
+                          modules: [Navigation, Pagination, Autoplay, EffectCoverflow],
+                          loop: true,
+                          autoplay: {
+                              delay: 3000,
+                              disableOnInteraction: false,
+                          },
+                          navigation: {
+                              nextEl: '.swiper-button-next',
+                              prevEl: '.swiper-button-prev',
+                          },
+                          pagination: {
+                              el: '.swiper-pagination',
+                              clickable: true,
+                          },
+                          effect: 'coverflow',
+                          coverflowEffect: {
+                              rotate: 30,
+                              stretch: 10,
+                              depth: 200,
+                              modifier: 1.5,
+                              slideShadows: true,
+                          },
+                          spaceBetween: 30,
+                          centeredSlides: true,
+                          slidesPerView: 'auto',
+                          grabCursor: true,
+                          breakpoints: {
+                              640: {
+                                  slidesPerView: 1,
+                              },
+                              1024: {
+                                  slidesPerView: 1,
+                              },
+                          },
+                      });
+                  }
+              }, 100)
+          })
+          .catch(error => console.error('Erreur lors du chargement des projets:', error))
   })
-);
+})

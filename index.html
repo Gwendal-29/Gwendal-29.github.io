@@ -2,16 +2,17 @@
 <html lang="en" class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth">
 
 <head>
+    <script type="module" src="/@vite/client"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="lib/locomotive.css">
+
     <title>Portfolio Vasseur Gwendal</title>
 </head>
 
 <body>
-    <div id="pointor"></div>
     <div data-scroll-container>
         <header>
             <div class="links">
@@ -21,7 +22,7 @@
             </div>
             <div class="wrapper">
                 <div data-scroll class="appear" id="h1-wrapper">
-                    <h1 data-scroll-position="left" data-scroll data-scroll-speed="1">Vasseur Gwendal</h1>
+                    <h1 data-scroll data-scroll-speed="1">Vasseur Gwendal</h1>
                 </div>
             </div>
             <div data-scroll data-scroll-repeat="true" class="wrapper" id="color">
@@ -40,11 +41,18 @@
                 <div class="h2-wrapper">
                     <h2 data-scroll data-scroll-speed="2" class="title">À propos</h2>
                 </div>
-                <p> Je m'appelle Gwendal et je suis actuellement en première année de BUT informatique à<a
-                        class="contact-iut" href="https://iut-lannion.univ-rennes.fr/" target="_blank"> l'IUT de
-                        Lannion</a>. Je suis passionné par les technologies depuis mon plus jeune âge, j'ai décidé de
-                    poursuivre des études dans ce domaine afin d'approfondir mes connaissances et d'acquérir des
-                    compétences pratiques. Par la suite, j'aimerais travailler dans le développement d'application</p>
+                <p> Je m'appelle Gwendal et je suis actuellement en troisième année de BUT informatique à
+                    <a class="contact-iut" href="https://iut-lannion.univ-rennes.fr/" target="_blank">l'IUT de
+                        Lannion</a>.
+                    Passionné par les technologies depuis mon plus jeune âge, j'ai consacré mes études à approfondir mes
+                    connaissances
+                    et à développer des compétences pratiques en informatique. Mon objectif est de poursuivre ma
+                    formation en école
+                    d'ingénieur afin d'approfondir mes savoirs et de m'orienter vers le développement d'applications.
+
+                    Je suis motivé, curieux et déterminé à relever de nouveaux défis dans ce domaine.
+                </p>
+
             </section>
             <div data-scroll class="line-wrapper">
                 <div class="line"></div>
@@ -58,6 +66,7 @@
                     <span data-scroll data-scroll-speed="0">l</span>
                     <span data-scroll data-scroll-speed="0">s</span>
                 </h2>
+                <canvas id="canvas"></canvas>
                 <div class="wrapper">
                     <div data-scroll class="appear">
                         <p>C</p>
@@ -76,23 +85,23 @@
                 <div class="wrapper">
                     <div data-scroll class="appear">
                         <p>HTML/CSS</p>
-
-                        <div class="wrapper">
-                            <div data-scroll class="appear">
-                                <p>JavaScript</p>
-                            </div>
-                        </div>
-                        <div class="wrapper">
-                            <div data-scroll class="appear">
-                                <p>SQL</p>
-                            </div>
-                        </div>
-                        <div class="wrapper">
-                            <div data-scroll class="appear">
-                                <p>PHP</p>
-                            </div>
-                        </div>
-
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div data-scroll class="appear">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div data-scroll class="appear">
+                        <p>SQL</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div data-scroll class="appear">
+                        <p>PHP</p>
+                    </div>
+                </div>
             </section>
             <div data-scroll class="line-wrapper">
                 <div class="line"></div>
@@ -108,53 +117,79 @@
                     <span data-scroll data-scroll-speed="-1">s</span>
 
                 </h2>
-                <div class="projects-container">
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger1" id="p1">
-                        <img src="img/puissance-4.jpg" alt="puissance 4">
-                        <div class="projects-infos">
-                            <p> Puissance 4</p>
-                            <p> 2022</p>
-                        </div>
+                <div class="projects-container" data-scroll data-scroll-repeat="true">
+                    <!-- Swiper -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Diapositive 1 -->
+                            <div class="swiper-slide" data-title="Puissance 4"
+                                data-description="Réalisation d'un puissance 4 ainsi qu'un bot en langage C."
+                                data-link="https://github.com/Gwendal-29/Puissance4" data-img="img/puissance-4.jpg">
+                                <img src="img/puissance-4.jpg" loading="lazy" alt="Puissance 4">
+                                <div class="projects-infos">
+                                    <p>Puissance 4</p>
+                                    <p>2022</p>
+                                </div>
+                            </div>
+                            <!-- Diapositive 2 -->
+                            <div class="swiper-slide" data-title="Administrer des systèmes informatiques communicants"
+                                data-description="Création d'un environnement conteneurisé avec Docker pour générer des PDF."
+                                data-link="https://github.com/Gwendal-29/Docker" data-img="img/docker2.png">
+                                <img src="img/docker2.png" loading="lazy" alt="Docker">
+                                <div class="projects-infos">
+                                    <p>Docker</p>
+                                    <p>2022</p>
+                                </div>
+                            </div>
+                            <!-- Diapositive 3 -->
+                            <div class="swiper-slide" data-title="Résolution du problème des cavalier" data-img="img/Bic-logo.jpg"
+                                data-description="Réalisation d'une étude RSE sur l'entreprise BIC en équipe."
+                                data-link="https://www.canva.com/design/DAFM8ChrmFo/view">
+                                <img src="img/a21bfc5d-05a7-43f3-a935-d3ef70fccd4f.webp" loading="lazy" alt="SAE BIC">
+                                <div class="projects-infos">
+                                    <p>Résolution du problème des cavaliers</p>
+                                    <p>2022</p>
+                                </div>
+                            </div>
+                            <!-- Diapositive 4 -->
+                            <div class="swiper-slide" data-title="Réalisation d'un site vitrine pour une entreprise de sport" data-img="img/Bic-logo.jpg"
+                                data-description="Réalisation d'une étude RSE sur l'entreprise BIC en équipe."
+                                data-link="https://www.canva.com/design/DAFM8ChrmFo/view">
+                                <img src="img/Capture d’écran 2023-06-10 150132.png" alt="SAE BIC" loading="lazy">
+                                <div class="projects-infos">
+                                    <p>Site vitrine</p>
+                                    <p>2022</p>
+                                </div>
+                            </div>
+                            <!-- Diapositive 5 -->
+                            <div class="swiper-slide" data-title="Site web de locations de logements en Bretagne" data-img="img/Bic-logo.jpg"
+                                data-description="Réalisation d'une étude RSE sur l'entreprise BIC en équipe."
+                                data-link="https://www.canva.com/design/DAFM8ChrmFo/view" loading="lazy">
+                                <img src="img/Capture_mkweb.JPG" alt="SAE BIC" loading="lazy">
+                                <div class="projects-infos">
+                                    <p>Site web de locations de logements en Bretagne</p>
+                                    <p>2024</p>
+                                </div>
+                            </div>
+                            <!-- Diapositive 6 -->
+                            <div class="swiper-slide" data-title="API Pokémon GO" data-img="img/Bic-logo.jpg"
+                                data-description="Réalisation d'une étude RSE sur l'entreprise BIC en équipe."
+                                data-link="https://www.canva.com/design/DAFM8ChrmFo/view" loading="lazy">
+                                <img src="img/1fcf9a126df6b83faa1d9bffe48a2eb7.webp" alt="SAE BIC" loading="lazy">
+                                <div class="projects-infos">
+                                    <p>API Pokémon GO</p>
+                                    <p>2024</p>
+                                </div>
+                            </div>
 
-                    </div>
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger2" id="p2">
-                        <img src="img/docker2.png" alt="Docker ">
-                        <div class="projects-infos">
-                            <p> Docker</p>
-                            <p> 2022</p>
                         </div>
-                    </div>
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger3 " id="p3">
-                        <img src="img/Bic-logo.jpg" alt="SAE BIC">
-                        <div class="projects-infos">
-                            <p> Bic</p>
-                            <p> 2022</p>
-                        </div>
-                    </div>
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger4" id="p4">
-                        <img src="img/huit-reines.jpg" alt="puissance 4">
-                        <div class="projects-infos">
-                            <p> Graphe</p>
-                            <p> 2023</p>
-                        </div>
-                    </div>
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger5" id="p5">
-                        <img src="img/Capture d’écran 2023-06-10 150132.png" alt="puissance 4">
-                        <div class="projects-infos">
-                            <p> Site Web</p>
-                            <p> 2022</p>
-                        </div>
-                    </div>
-                    <div data-scroll data-scroll-speed="1" class="project modal-trigger6" id="p6">
-                        <img src="img/sqlsae.png" alt="puissance 4">
-                        <div class="projects-infos">
-                            <p> Base de donnée SQL</p>
-                            <p> 2022</p>
-                        </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
-
-
 
 
             </section>
@@ -174,7 +209,7 @@
             </h2>
             <div class="contact">
                 <div class="cv">
-                    <img id="img-cv" src="img/Copie de 06-47-85-44-00.jpg" alt="">
+                    <img loading="lazy" id="img-cv" src="img/Copie de 06-47-85-44-00.jpg" alt="">
                     <div class="cvinfo">
                         <a href="img/VasseurGwendalCV.pdf" download="cvVasseurGwendal.pdf" target="_blank"
                             id="downloadLink">Télécharger mon CV </a>
@@ -185,13 +220,15 @@
                 <div class="information">
                     <dl>
 
-                        <dd> <img src="img/appel-telephonique.png" alt="logo" width="25" height="25"> : 06 74 85 44 00
+                        <dd> <img loading="lazy" src="img/appel-telephonique.png" alt="logo" width="25" height="25"> :
+                            06 74 85 44 00
                         </dd>
-                        <dd> <img src="img/gmail.png" alt="logo" width="25" height="25"> : <a
+                        <dd> <img loading="lazy" src="img/gmail.png" alt="logo" width="25" height="25"> : <a
                                 href="mailto:gwendal.vasseur29800@gmail.com">gwendal.vasseur29800@gmail.com</a></dd>
-                        <dd> <img src="img/espace-reserve.png" alt="logo" width="25" height="25"> : 19 rue Jean Jacques
+                        <dd> <img loading="lazy" src="img/espace-reserve.png" alt="logo" width="25" height="25"> : 19
+                            rue Jean Jacques
                             Audubon</dd>
-                        <dd> <img src="img/linkedin.png" width="25" height="25" alt="logo"> : <a
+                        <dd> <img loading="lazy" src="img/linkedin.png" width="25" height="25" alt="logo"> : <a
                                 href="https://www.linkedin.com/in/gwendal-vasseur-537721266/" target="_blank"> Linkedin
                             </a></dd>
                     </dl>
@@ -201,137 +238,8 @@
         </footer>
     </div>
 
-    <div id="modal-1" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger1">X</div>
-                <h3>développement et optimisations d'applications </h3>
-                <br>
-                <p>Réalisation d'un puissance 4 ainsi qu'un bot en langage C.
-                </p>
-
-                <ul>
-                    <li>Réalisation d'une maquette </li>
-                    <li>Réalisation d'un document tutoriel avec doxygen </li>
-                    <li>Réalisation du puissance 4 en langage C </li>
-                    <li>Réalisation de test</li>
-                    <li>Etablir une stratégie de jeu</li>
-                    <li>Création du bot en langage C</li>
-                    <li> <a href="https://github.com/Gwendal-29/Puissance4" target="_blank"> Voir le projet </a></li>
-                </ul>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div id="modal-2" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger2">X</div>
-                <h3> Administrer des sytèmes informatiques communicants</h3>
-                <p>Réalisation d'un environnement conteneuriser avec docker pour générer des pdf.
-                </p>
-                <ul>
-                    <li>Création un fichier HTML de la page </li>
-                    <li>Réalisation de script permettant de récupérer les données voulu de fichier texte </li>
-                    <li>Réalisation d'un script qui permet de générer le fichier html après récupération des données
-                    </li>
-                    <li>Conversion du fichier HTML en fichier pdf avec l'image docker "HTML2PDF"</li>
-                    <li>Réunir les scripts dans un même fichier</li>
-                    <li> <a href="https://github.com/Gwendal-29/Docker" target="_blank"> Voir le projet </a></li>
-
-                </ul>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div id="modal-3" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger3">X</div>
-                <h3>Travailler dans une équipe informatique</h3>
-                <p>Réalisation d'une étude RSE sur l'entreprise BIC en équipe.
-                </p>
-                <ul>
-                    <li>Création d'une matrice SWOT </li>
-                    <li>Création d'une fiche signalétique</li>
-                    <li>Créaton d'une fiche caractéristique de l'entreprise </li>
-                    <li> <a href="https://www.canva.com/design/DAFM8ChrmFo/view" target="_blank"> Voir le projet </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-
-    </div>
-
-    <div id="modal-4" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger4">X</div>
-                <h3>Exploration algorithmique d'un problème</h3>
-                <p>Réalisation d'un script python permettant de résoudre le problème du cavalier.
-                </p>
-                <ul>
-                    <li>Réalisation du script</li>
-                    <li>Réalisation d'un compte rendu</li>
-                    <li> <a href="https://github.com/Gwendal-29/SAEgraphe" target="_blank"> Voir le projet </a></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="modal-5" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger5">X</div>
-                <h3> Conduite de projet </h3>
-                <p>Réalisation d'un site vitrine pour une entreprise de sport.
-                </p>
-                <ul>
-                    <li>Construction d'un cahier des charges correspondant au besoin client </li>
-                    <li>Réalisation d'une maquette graphique sur figma</li>
-                    <li>Utilisation de git pour pouvoir travailler en équipe en simultané</li>
-                    <li>Réalisation de chaque page en fonction de la maquette</li>
-                    <li> <a href="https://github.com/Gwendal-29/SiteWeb" target="_blank"> Voir le projet </a></li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="modal-6" class="modal-container">
-        <div class="overlay">
-
-            <div class="modal">
-                <div class="button-modal modal-trigger6">X</div>
-                <h3> Gérer des données</h3>
-                <p>Réalisation d'une base de donnée sous postgreSQL à partir d'un cahier des charges et d'un fichier
-                    CSV.
-                </p>
-                <ul>
-                    <li>Réalisation d'un diagramme UML</li>
-                    <li>Implémentation de la base de donnée </li>
-                    <li> <a href="https://github.com/Gwendal-29/BDD" target="_blank"> Voir le projet </a></li>
-
-                </ul>
-            </div>
-        </div>
-
-    </div>
 </body>
-<script src="lib/locomotive.js"> </script>
-<script src="main.js"> </script>
+
+<script type="module" src="main.js"> </script>
 
 </html>
