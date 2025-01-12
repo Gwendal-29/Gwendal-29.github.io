@@ -146,7 +146,7 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
               setTimeout(() => {
                   if (project.images && project.images.length > 0) {
                       new Swiper('.project-carousel', {
-                          modules: [Navigation, Pagination, Autoplay, EffectCoverflow],
+                         
                           loop: true,
                           autoplay: {
                               delay: 3000,
