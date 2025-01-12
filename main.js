@@ -5,7 +5,7 @@
 // import Swal from "sweetalert2";
 
 const swiper = new Swiper('.swiper', {
-  
+
   loop: true,
   autoplay: {
     delay: 3000,
@@ -75,29 +75,32 @@ window.addEventListener("resize", () => {
 
 document.querySelectorAll('.swiper-slide').forEach((slide) => {
   slide.addEventListener('click', () => {
-      fetch('projects.json')
-          .then(response => response.json())
-          .then(data => {
-              const title = slide.getAttribute('data-title');
-              const project = data.find(project => project.title === title);
-              
+    fetch('projects.json')
+      .then(response => response.json())
+      .then(data => {
+        const title = slide.getAttribute('data-title');
+        const project = data.find(project => project.title === title);
 
-              if (!project) {
-                  console.error('Projet non trouvé');
-                  return;
-              }
 
-            
-              
-              
-              // Création dynamique du carrousel Swiper avec les images du projet
-              const carouselHtml = project.images && project.images.length > 0 ? `
+        if (!project) {
+          console.error('Projet non trouvé');
+          return;
+        }
+
+        // Création dynamique du carrousel Swiper avec les images du projet
+        const carouselHtml = project.images && project.images.length > 0 ? `
                   <div class="swiper project-carousel">
                       <div class="swiper-wrapper">
                           ${project.images.map(image => `
                               <div class="swiper-slide">
-                                  <img src="${image.url}" alt="${image.alt}" style="width: 80%; height: auto; border-radius: 8px;">
-                                 
+                                  <img src="${image.url}" alt="${image.alt}" 
+                                    style="
+                                        width: 60%;
+                                        max-width: 400px; 
+                                        height: auto; 
+                                        
+                                        border-radius: 8px; 
+                                        object-fit: contain;">
                               </div>
                           `).join('')}
                       </div>
@@ -107,24 +110,24 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
                   </div>
               ` : ''
 
-              // Création de la liste des compétences
-              const competencesHtml = project.competences.map(c => `
+        // Création de la liste des compétences
+        const competencesHtml = project.competences.map(c => `
                   <li style="color: #555; font-size: 16px; line-height: 1.6;">
                       <strong>${c.name}:</strong> ${c.details}
                   </li>
               `).join('')
 
-              // Création de la liste des technologies utilisées
-              const toolsHtml = project.tools && project.tools.length > 0 ? `
+        // Création de la liste des technologies utilisées
+        const toolsHtml = project.tools && project.tools.length > 0 ? `
                   <h3 style="text-align: left;font-size: calc(0.8em + 0.8vw);margin-top: 20px;">Technologies utilisées :</h3>
                   <ul style="color: #555; font-size: 16px; line-height: 1.6;">
                       ${project.tools.map(tool => `<li>${tool.name}</li>`).join('')}
                   </ul>
               ` : ''
 
-              Swal.fire({
-                  title: `<span style=" font-size: calc(0.8em + 0.8vw); font-weight: bold;">${project.title}</span>`,
-                  html: `
+        Swal.fire({
+          title: `<span style=" font-size: calc(0.8em + 0.8vw); font-weight: bold;">${project.title}</span>`,
+          html: `
                       <div style="text-align: left; max-height: 500px; overflow-y: auto; padding-right: 10px;">
                           <h3 style="text-align: left;font-size: calc(0.7em + 0.8vw);">Compétences mobilisées :</h3>
                           <ul>
@@ -136,54 +139,54 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
                           ${toolsHtml}
                       </div>
                   `,
-                  width: '900px',
-                  showCloseButton: true,
-                  showConfirmButton: false
-                  
-              })
+          width: '900px',
+          showCloseButton: true,
+          showConfirmButton: false
 
-              // Initialiser Swiper avec la même configuration que sur la page principale
-              setTimeout(() => {
-                  if (project.images && project.images.length > 0) {
-                      new Swiper('.project-carousel', {
-                         
-                          loop: true,
-                          autoplay: {
-                              delay: 3000,
-                              disableOnInteraction: false,
-                          },
-                          navigation: {
-                              nextEl: '.swiper-button-next',
-                              prevEl: '.swiper-button-prev',
-                          },
-                          pagination: {
-                              el: '.swiper-pagination',
-                              clickable: true,
-                          },
-                          effect: 'coverflow',
-                          coverflowEffect: {
-                              rotate: 30,
-                              stretch: 10,
-                              depth: 200,
-                              modifier: 1.5,
-                              slideShadows: true,
-                          },
-                          spaceBetween: 30,
-                          centeredSlides: true,
-                          slidesPerView: 'auto',
-                          grabCursor: true,
-                          breakpoints: {
-                              640: {
-                                  slidesPerView: 1,
-                              },
-                              1024: {
-                                  slidesPerView: 1,
-                              },
-                          },
-                      });
-                  }
-              }, 100)
-          })
-          .catch(error => console.error('Erreur lors du chargement des projets:', error))
+        })
+
+        // Initialiser Swiper avec la même configuration que sur la page principale
+        setTimeout(() => {
+          if (project.images && project.images.length > 0) {
+            new Swiper('.project-carousel', {
+
+              loop: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              effect: 'coverflow',
+              coverflowEffect: {
+                rotate: 30,
+                stretch: 10,
+                depth: 200,
+                modifier: 1.5,
+                slideShadows: true,
+              },
+              spaceBetween: 30,
+              centeredSlides: true,
+              slidesPerView: 'auto',
+              grabCursor: true,
+              breakpoints: {
+                640: {
+                  slidesPerView: 1,
+                },
+                1024: {
+                  slidesPerView: 1,
+                },
+              },
+            });
+          }
+        }, 100)
+      })
+      .catch(error => console.error('Erreur lors du chargement des projets:', error))
   })
 })
