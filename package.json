@@ -1,0 +1,21 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build":"vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "sweetalert2": "^11.6.13",
+    "swiper": "^9.4.1"
+  }
+}
