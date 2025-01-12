@@ -1,0 +1,251 @@
+[
+    {
+        "title": "Puissance 4",
+        "description": "Dans le cadre de ce projet, j'ai développé un jeu Puissance 4 en langage C, accompagné d'un bot capable de jouer contre un utilisateur en suivant une stratégie optimisée.<br><br>Étapes :<br>- Développement du jeu en langage C.<br>- Création d’un document tutoriel avec Doxygen.<br>- Mise en œuvre d'algorithmes pour optimiser les performances du bot.<br>- Gestion des versions via GitHub.<br>- Planification et suivi des étapes du projet pour respecter les délais.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Développement du jeu Puissance 4 en C et création d’un document tutoriel avec Doxygen."
+            },
+            {
+                "name": "Optimiser",
+                "details": "Mise en œuvre d'algorithmes pour optimiser les performances du bot."
+            },
+            {
+                "name": "Administrer",
+                "details": "Gestion des versions du projet via GitHub et organisation structurée du code source."
+            },
+            {
+                "name": "Gérer",
+                "details": "Planification et suivi des étapes du projet pour respecter les délais."
+            }
+        ],
+        "images": [
+            {
+                "url": "img/puissance4_screen.JPG",
+                "alt": ""
+            },
+            {
+                "url": "img/puissance4_screen2.JPG",
+                "alt": ""
+            }
+        ],
+        "tools": [
+            {
+                "name": "C"
+            },
+            {
+                "name": "Doxygen"
+            },
+            {
+                "name": "GitHub"
+            }
+        ],
+        "results": "Développement d’un bot efficace et compétitif, application fonctionnelle, et tutoriel clair avec Doxygen.",
+        "link": "https://github.com/Gwendal-29/Puissance4",
+        "img": "img/puissance-4.jpg",
+        "year": "2022"
+    },
+    {
+        "title": "Administrer des systèmes informatiques communicants",
+        "description": "Réalisation d'un environnement conteneurisé avec Docker pour générer des PDF.<br><br>Étapes :<br>- Création d'un fichier HTML pour la page.<br>- Réalisation de scripts permettant de récupérer les données voulues des fichiers texte.<br>- Génération d'un fichier HTML après récupération des données.<br>- Conversion du fichier HTML en fichier PDF avec l'image Docker 'HTML2PDF'.<br>- Réunion de tous les scripts dans un seul fichier.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Création d'un fichier HTML pour la page."
+            },
+            {
+                "name": "Administrer",
+                "details": "Configuration et gestion de l'environnement conteneurisé avec Docker."
+            },
+            {
+                "name": "Gérer",
+                "details": "Organisation et intégration de plusieurs scripts en un pipeline cohérent."
+            }
+        ],
+        "images": [
+            
+        ],
+        "tools": [
+            {
+                "name": "Docker"
+            },
+            {
+                "name": "HTML"
+            },
+            {
+                "name": "Shell Scripting"
+            }
+        ],
+        "results": "Création d'un pipeline automatisé pour convertir des données texte en PDF via un environnement Dockerisé.",
+        "link": "https://github.com/Gwendal-29/Docker",
+        "img": "img/docker-environment.jpg",
+        "year": "2023"
+    },
+    {
+        "title": "Résolution du problème des cavalier",
+        "description": "Réalisation d'un script Python permettant de résoudre le problème du cavalier.<br><br>Étapes :<br>- Développement du script pour résoudre le problème.<br>- Rédaction d'un compte rendu pour documenter le processus.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Développement du script pour résoudre le problème."
+            },
+            {
+                "name": "Gérer",
+                "details": "Documentation et rédaction d'un compte rendu détaillé."
+            }
+        ],
+        "images": [
+            
+        ],
+        "tools": [
+            {
+                "name": "Python"
+            }
+        ],
+        "results": "Script fonctionnel et compte rendu complet documentant la solution algorithmique.",
+        "link": "https://github.com/Gwendal-29/KnightProblem",
+        "img": "img/knight-problem.jpg",
+        "year": "2022"
+    },
+    {
+        "title": "Réalisation d'un site vitrine pour une entreprise de sport",
+        "description": "Construction d'un cahier des charges, création d'une maquette graphique et développement d'un site vitrine pour une entreprise de sport.<br><br>Étapes :<br>- Construction d'un cahier des charges détaillé en collaboration avec le client.<br>- Création d'une maquette graphique sur Figma.<br>- Développement des pages du site en fonction de la maquette.<br>- Utilisation de Git pour le travail collaboratif en équipe.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Création du site en suivant les exigences de la maquette."
+            },
+            {
+                "name": "Conduire",
+                "details": "Rédaction d'un cahier des charges détaillé en collaboration avec le client."
+            },
+            {
+                "name": "Collaborer",
+                "details": "Utilisation de Git pour synchroniser le travail en équipe."
+            }
+        ],
+        "images": [
+            {
+                "url": "img/Capture d’écran 2023-06-10 150132.png",
+                "alt": "Aperçu de la page d'accueil du site vitrine."
+            }
+        ],
+        "tools": [
+            {
+                "name": "Figma"
+            },
+            {
+                "name": "HTML/CSS"
+            },
+            {
+                "name": "Git"
+            }
+        ],
+        "results": "Site vitrine fonctionnel répondant aux besoins du client, avec un design soigné et une collaboration efficace en équipe.",
+        "link": "https://github.com/Gwendal-29/SportWebsite",
+        "img": "img/sport-website.jpg",
+        "year": "2023"
+    },
+    {
+        "title": "Site web de locations de logements en Bretagne",
+        "description": "Projet réalisé en équipe de 7 dans un cadre universitaire.<br><br>Étapes :<br>- Mise en place d'une gestion de projet selon la méthode Scrum.<br>- Développement collaboratif du site sur 4 semaines.<br>- Présentation des avancées à des clients fictifs.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Développement des fonctionnalités du site en équipe."
+            },
+            {
+                "name": "Conduire",
+                "details": "Application de la méthode Scrum pour coordonner les tâches et suivre les progrès."
+            },
+            {
+                "name": "Collaborer",
+                "details": "Travail en équipe de 7 membres avec utilisation d'outils collaboratifs."
+            }
+        ],
+        "images": [
+            {
+                "url": "img/Capture_mkweb.JPG",
+                "alt": ""
+            },
+            {
+                "url": "img/Alhaiz_Breizh_1.webp",
+                "alt": ""
+            },
+            {
+                "url": "img/Alhaiz_Breizh_2.webp",
+                "alt": ""
+            }
+        ],
+        "tools": [
+            {
+                "name": "PHP"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "PostgreSQL"
+            },
+            {
+                "name": "HTML/CSS"
+            },
+            {
+                "name": "Git"
+            },
+            {
+                "name": "Trello"
+            }
+        ],
+        "results": "Site fonctionnel permettant la gestion de locations, avec un processus Scrum réussi et une présentation convaincante aux clients fictifs.",
+        "link": "https://github.com/Gwendal-29/BrittanyRentals",
+        "img": "img/brittany-rentals.jpg",
+        "year": "2023"
+    },
+    {
+        "title": "API Pokémon GO",
+        "description": "API réalisée en groupe permettant de présenter la liste de tous les Pokémon de Pokémon GO avec différentes versions d'affichage (version complète : V5).<br><br>Étapes :<br>- Mise en place d'une architecture backend pour gérer les données des Pokémon.<br>- Création d'un frontend affichant les caractéristiques des Pokémon, leurs faiblesses, etc.<br>- Collaboration en équipe pour assurer la cohérence entre le backend et le frontend.",
+        "competences": [
+            {
+                "name": "Réaliser",
+                "details": "Développement des fonctionnalités de l'API et de l'interface utilisateur."
+            },
+            {
+                "name": "Collaborer",
+                "details": "Travail en équipe avec des outils collaboratifs pour gérer le projet."
+            }
+        ],
+        "images": [
+            {
+                "url": "img/Capture_pokemon.JPG",
+                "alt": ""
+            },
+            {
+                "url": "img/Capture_pokemon2.JPG",
+                "alt": ""
+            }
+        ],
+        "tools": [
+            {
+                "name": "Node.js"
+            },
+            {
+                "name": "React"
+            },
+            {
+                "name": "MongoDB"
+            },
+            {
+                "name": "Git"
+            },
+            {
+                "name": "Postman"
+            }
+        ],
+        "results": "API fonctionnelle et interface utilisateur intuitive permettant d'explorer les caractéristiques des Pokémon GO.",
+        "link": "https://github.com/Gwendal-29/PokemonAPI",
+        "img": "img/pokemon-api.jpg",
+        "year": "2023"
+    }
+]

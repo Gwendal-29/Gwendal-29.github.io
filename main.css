@@ -425,8 +425,7 @@ h3 {
 
 
 .swiper-slide img {
-    width: 30vw; /* Prend toute la largeur du conteneur */
-    
+    width: 20vw; /* Prend toute la largeur du conteneur */
     aspect-ratio: 3 / 4; /* Définit un ratio fixe (3:4 pour une image verticale) */
     object-fit: cover; /* Recadre l'image pour remplir l'espace sans distorsion */
     border-radius: 8px; /* Ajoute des bords arrondis pour un rendu élégant */
