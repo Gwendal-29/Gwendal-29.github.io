@@ -116,14 +116,26 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
                       <strong>${c.name}:</strong> ${c.details}
                   </li>
               `).join('')
+          
+        
+              const toolsHtml = project.tools && project.tools.length > 0 ? `
+                <h3 style="text-align: left; font-size: calc(0.8em + 0.8vw); margin-top: 20px;">Technologies utilisées :</h3>
+                <ul style="color: #555; font-size: 16px; line-height: 1.6; list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+                  ${project.tools.map((tool) => {
+                    const toolName = tool.name.toLowerCase().replace(/\s+/g, '');
+                    const logoUrl = `https://cdn.simpleicons.org/${toolName}`;
+                    return `
+                      <li style="display: flex; align-items: center; margin: 10px;">
+                        <img src="${logoUrl}" alt="${tool.name} logo" style="width: 40px; height: auto; margin-right: 8px;" onerror="this.onerror=null; this.replaceWith(document.createTextNode('${tool.name}'));">
+                        <span style="font-size: 14px;">${tool.name}</span>
+                      </li>
+                    `;
+                  }).join('')}
+                </ul>
+              ` : '';
 
-        // Création de la liste des technologies utilisées
-        const toolsHtml = project.tools && project.tools.length > 0 ? `
-                  <h3 style="text-align: left;font-size: calc(0.8em + 0.8vw);margin-top: 20px;">Technologies utilisées :</h3>
-                  <ul style="color: #555; font-size: 16px; line-height: 1.6;">
-                      ${project.tools.map(tool => `<li>${tool.name}</li>`).join('')}
-                  </ul>
-              ` : ''
+            
+
 
         Swal.fire({
           title: `<span style=" font-size: calc(0.8em + 0.8vw); font-weight: bold;">${project.title}</span>`,

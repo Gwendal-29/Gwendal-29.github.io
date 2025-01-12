@@ -10,14 +10,6 @@
             {
                 "name": "Optimiser",
                 "details": "Mise en œuvre d'algorithmes pour optimiser les performances du bot."
-            },
-            {
-                "name": "Administrer",
-                "details": "Gestion des versions du projet via GitHub et organisation structurée du code source."
-            },
-            {
-                "name": "Gérer",
-                "details": "Planification et suivi des étapes du projet pour respecter les délais."
             }
         ],
         "images": [
@@ -35,7 +27,7 @@
                 "name": "C"
             },
             {
-                "name": "Doxygen"
+                "name": "doxygen"
             },
             {
                 "name": "GitHub"
@@ -63,18 +55,16 @@
                 "details": "Organisation et intégration de plusieurs scripts en un pipeline cohérent."
             }
         ],
-        "images": [
-            
-        ],
+        "images": [],
         "tools": [
             {
                 "name": "Docker"
             },
             {
-                "name": "HTML"
+                "name": "HTML5"
             },
             {
-                "name": "Shell Scripting"
+                "name": "PHP"
             }
         ],
         "results": "Création d'un pipeline automatisé pour convertir des données texte en PDF via un environnement Dockerisé.",
@@ -95,9 +85,7 @@
                 "details": "Documentation et rédaction d'un compte rendu détaillé."
             }
         ],
-        "images": [
-            
-        ],
+        "images": [],
         "tools": [
             {
                 "name": "Python"
@@ -136,7 +124,10 @@
                 "name": "Figma"
             },
             {
-                "name": "HTML/CSS"
+                "name": "HTML5"
+            },
+            {
+                "name": "CSS3"
             },
             {
                 "name": "Git"
@@ -162,6 +153,10 @@
             {
                 "name": "Collaborer",
                 "details": "Travail en équipe de 7 membres avec utilisation d'outils collaboratifs."
+            },
+            {
+                "name": "Administrer",
+                "details": "Gestion complète de la base de données, incluant la conception du schéma UML puis sa réalisation en sql"
             }
         ],
         "images": [
@@ -189,7 +184,10 @@
                 "name": "PostgreSQL"
             },
             {
-                "name": "HTML/CSS"
+                "name": "HTML5"
+            },
+            {
+                "name": "CSS3"
             },
             {
                 "name": "Git"
@@ -209,7 +207,7 @@
         "competences": [
             {
                 "name": "Réaliser",
-                "details": "Développement des fonctionnalités de l'API et de l'interface utilisateur."
+                "details": "Conception et développement d'une interface utilisateur intuitive permettant d'afficher les détails des Pokémon, avec des données récupérées via une API."
             },
             {
                 "name": "Collaborer",
@@ -228,19 +226,10 @@
         ],
         "tools": [
             {
-                "name": "Node.js"
-            },
-            {
-                "name": "React"
-            },
-            {
-                "name": "MongoDB"
+                "name": "javascript"
             },
             {
                 "name": "Git"
-            },
-            {
-                "name": "Postman"
             }
         ],
         "results": "API fonctionnelle et interface utilisateur intuitive permettant d'explorer les caractéristiques des Pokémon GO.",
