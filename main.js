@@ -1,13 +1,11 @@
 //constante
-import LocomotiveScroll from "locomotive-scroll";
-import "swiper/swiper-bundle.css";
-import Swiper, { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper";
-import Swal from "sweetalert2";
-
-
+// import LocomotiveScroll from "locomotive-scroll";
+// import "swiper/swiper-bundle.css";
+// import Swiper, { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper";
+// import Swal from "sweetalert2";
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination, Autoplay, EffectCoverflow],
+  
   loop: true,
   autoplay: {
     delay: 3000,
