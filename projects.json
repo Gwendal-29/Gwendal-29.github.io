@@ -203,11 +203,11 @@
     },
     {
         "title": "API Pokémon GO",
-        "description": "API réalisée en groupe permettant de présenter la liste de tous les Pokémon de Pokémon GO avec différentes versions d'affichage (version complète : V5).<br><br>Étapes :<br>- Mise en place d'une architecture backend pour gérer les données des Pokémon.<br>- Création d'un frontend affichant les caractéristiques des Pokémon, leurs faiblesses, etc.<br>- Collaboration en équipe pour assurer la cohérence entre le backend et le frontend.",
+        "description": "Présentation de la liste de tous les Pokémon récupérés grâce à une API, avec différentes versions d'affichage (version complète : V6).<br><br>- Création d'un frontend affichant les caractéristiques des Pokémon, leurs faiblesses, etc.<br>- Intégration d'une fonctionnalité permettant de jouer les sons des Pokémon lorsqu'on appuie dessus, grâce à l'utilisation de l'API.",
         "competences": [
             {
                 "name": "Réaliser",
-                "details": "Conception et développement d'une interface utilisateur intuitive permettant d'afficher les détails des Pokémon, avec des données récupérées via une API."
+                "details": "Conception et développement d'une interface utilisateur intuitive permettant d'afficher les détails des Pokémon."
             },
             {
                 "name": "Collaborer",
