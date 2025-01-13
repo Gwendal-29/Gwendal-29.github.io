@@ -64,7 +64,6 @@ a:visited {
     color: #fefefe;
     transition: 0.1s linear;
     font-size: calc(0.8em + 0.8vw);
-
 }
 
 a::after {
@@ -85,8 +84,8 @@ a:hover {
 
 a:hover::after {
     animation: animLink 1.4s infinite ease-in-out;
-
 }
+
 
 @keyframes animLink {
     50% {
@@ -467,4 +466,90 @@ h3 {
 
 footer {
     margin-bottom: 0;
+}
+
+#call-to-action {
+    text-decoration: none;
+    /* Pas de soulignement */
+    color: inherit;
+    /* Conserve la couleur héritée */
+    cursor: pointer;
+    /* Garde un pointeur pour indiquer un lien cliquable */
+}
+
+#call-to-action:hover,
+#call-to-action:focus {
+    transform: none;
+    /* Supprime tout effet de transformation */
+    color: inherit;
+    /* Pas de changement de couleur au survol */
+}
+
+#call-to-action::after {
+    content: none;
+    /* Supprime l'effet :after */
+}
+
+#call-to-action:hover::after {
+    animation: none;
+    /* Supprime les animations */
+}
+
+.arrow-wrapper {
+    position: relative;
+    width: 40px;
+    /* Taille du conteneur */
+    height: 40px;
+    margin: 0 auto;
+    /* Centre horizontalement */
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    /* Place la flèche en bas de son conteneur */
+    left: 50%;
+    /* Centre horizontalement */
+    width: 30px;
+    height: 30px;
+    border-right: 4px solid #fff;
+    /* Bord droit */
+    border-top: 4px solid #fff;
+    /* Bord supérieur */
+    transform: translateX(-50%) rotate(135deg);
+    /* Oriente la flèche vers le bas */
+    animation: bounce 1.5s infinite ease-in-out;
+    /* Animation fluide */
+}
+
+.arrow-secondary {
+    position: absolute;
+    bottom: -5px;
+    /* Légèrement décalée pour apparaître derrière */
+    left: 50%;
+    width: 35px;
+    /* Taille plus grande que la première flèche */
+    height: 35px;
+    border-right: 4px solid rgba(255, 255, 255, 0.6);
+    /* Couleur plus transparente */
+    border-top: 4px solid rgba(255, 255, 255, 0.6);
+    /* Couleur plus transparente */
+    transform: translateX(-50%) rotate(135deg);
+    /* Même orientation */
+    animation: bounce 1.5s infinite ease-in-out;
+    /* Même animation */
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0) rotate(135deg);
+        /* Position initiale */
+    }
+
+    50% {
+        transform: translate(-50%, 10px) rotate(135deg);
+        /* Position décalée vers le bas */
+    }
 }
