@@ -92,7 +92,7 @@
             }
         ],
         "results": "Script fonctionnel et compte rendu complet documentant la solution algorithmique.",
-        "link": "https://github.com/Gwendal-29/KnightProblem",
+        "link": "https://github.com/Gwendal-29/SAEgraphe",
         "img": "img/knight-problem.jpg",
         "year": "2022"
     },
@@ -197,7 +197,7 @@
             }
         ],
         "results": "Site fonctionnel permettant la gestion de locations, avec un processus Scrum réussi et une présentation convaincante aux clients fictifs.",
-        "link": "https://github.com/Gwendal-29/BrittanyRentals",
+        "link": "https://github.com/KazouDev/MKWeb",
         "img": "img/brittany-rentals.jpg",
         "year": "2023"
     },
@@ -233,7 +233,7 @@
             }
         ],
         "results": "API fonctionnelle et interface utilisateur intuitive permettant d'explorer les caractéristiques des Pokémon GO.",
-        "link": "https://github.com/Gwendal-29/PokemonAPI",
+        "link": "https://github.com/Gwendal-29/pokemon",
         "img": "img/pokemon-api.jpg",
         "year": "2023"
     }

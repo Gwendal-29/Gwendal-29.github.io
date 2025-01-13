@@ -1,8 +1,8 @@
 /* Importation police */
 @font-face {
     font-family: "Roboto-Condensed";
-    src: url("/font/RobotoCondensed-Regular.ttf") format("woff2"),
-        url("/font/RobotoCondensed-Regular.ttf") format("woff");
+    src: url("./font/RobotoCondensed-Regular.ttf") format("woff2"),
+        url("./font/RobotoCondensed-Regular.ttf") format("woff");
 
 }
 
@@ -213,7 +213,7 @@ header h2 {
 }
 
 .img1 {
-    background: url("/img/26.jpg") top/cover;
+    background: url("./img/26.jpg") top/cover;
 }
 
 .h2-wrapper {

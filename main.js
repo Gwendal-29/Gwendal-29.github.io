@@ -86,6 +86,12 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
           console.error('Projet non trouvé');
           return;
         }
+        const githubLinkHtml = project.link ? `
+  <a href="${project.link}" target="_blank" rel="noopener noreferrer" 
+     style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #24292e; color: #fff; font-size: 16px; text-decoration: none; border-radius: 5px;">
+    Voir sur GitHub
+  </a>
+` : '';
 
         // Création dynamique du carrousel Swiper avec les images du projet
         const carouselHtml = project.images && project.images.length > 0 ? `
@@ -148,6 +154,7 @@ document.querySelectorAll('.swiper-slide').forEach((slide) => {
                           ${carouselHtml}
                           <h3 style="text-align: left;font-size: calc(0.8em + 0.8vw); margin-top: 20px;">Description :</h3>
                           <p style="color: #555; font-size: 18px; line-height: 1.6;">${project.description}</p>
+                           ${githubLinkHtml}
                           ${toolsHtml}
                       </div>
                   `,
