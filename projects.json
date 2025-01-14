@@ -140,7 +140,7 @@
     },
     {
         "title": "Site web de locations de logements en Bretagne",
-        "description": "Projet réalisé en équipe de 7 dans un cadre universitaire.<br><br>Étapes :<br>- Mise en place d'une gestion de projet selon la méthode Scrum.<br>- Développement collaboratif du site sur 4 semaines.<br>- Présentation des avancées à des clients fictifs.",
+        "description": "Projet réalisé en équipe de 7 dans un cadre universitaire.<br><br>Étapes :<br>- Création d'une maquette figma<br>- Mise en place d'une gestion de projet selon la méthode Scrum.<br>- Mise en place d'une base de donnée<br>- Développement collaboratif du site sur 4 semaines.<br>- Présentation des avancées à des clients fictifs.",
         "competences": [
             {
                 "name": "Réaliser",
@@ -194,6 +194,9 @@
             },
             {
                 "name": "Trello"
+            },
+            {
+                "name": "Figma"
             }
         ],
         "results": "Site fonctionnel permettant la gestion de locations, avec un processus Scrum réussi et une présentation convaincante aux clients fictifs.",

@@ -171,6 +171,7 @@ h1 {
     font-weight: bold;
     letter-spacing: 6px;
     color: #fefeff;
+    text-align: center;
 
 
 }
@@ -178,7 +179,7 @@ h1 {
 header h2 {
     font-size: calc(1rem + 6.5vw);
     margin: 18px 0;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -501,6 +502,7 @@ footer {
     /* Taille du conteneur */
     height: 40px;
     margin: 0 auto;
+    margin-top: 5em;
     /* Centre horizontalement */
 }
 
@@ -509,6 +511,7 @@ footer {
     bottom: 0;
     /* Place la flèche en bas de son conteneur */
     left: 50%;
+
     /* Centre horizontalement */
     width: 30px;
     height: 30px;
