@@ -151,12 +151,20 @@
                 "details": "Application de la méthode Scrum pour coordonner les tâches et suivre les progrès."
             },
             {
+                "name": "Gérer",
+                "details": "Supervision globale du projet, incluant la répartition des tâches, la priorisation des fonctionnalités et le respect des délais."
+            },
+            {
                 "name": "Collaborer",
                 "details": "Travail en équipe de 7 membres avec utilisation d'outils collaboratifs."
             },
             {
                 "name": "Administrer",
                 "details": "Gestion complète de la base de données, incluant la conception du schéma UML puis sa réalisation en sql"
+            },
+            {
+                "name": "Optimiser",
+                "details": "Amélioration des performances du site, optimisation des requêtes SQL et implémentation de pratiques de développement efficaces."
             }
         ],
         "images": [
